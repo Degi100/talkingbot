@@ -3,7 +3,6 @@ const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 const recognition = new SpeechRecognition();
 
 recognition.onstart = () => {
-  console.log("Speech Recognition started");
 };
 
 recognition.onresult = (event) => {
