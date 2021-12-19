@@ -6,6 +6,7 @@ body {
 	justify-content: center;
 	overflow: hidden;
 	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -15,4 +16,12 @@ button {
 	background-color: rgb(53, 116, 175);
 	font-size: 22px;
 
+}
+
+img {
+	width: 300px;
+}
+
+li{
+	list-style-type: none;
 }
