@@ -1,27 +1,19 @@
 const button = document.querySelector("button");
-
-const SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
-
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-recognition.onstart = function () {
+recognition.onstart = () => {
   console.log("Speech Recognition started");
 };
 
-recognition.onresult = function (event) {
-  console.log(event);
-
+recognition.onresult = (event) => {
   const spokenwords = event.results[0][0].transcript;
-
-  console.log("spoken words are", spokenwords);
   computerSpeech(spokenwords);
 };
 
 function computerSpeech(words) {
   const speech = new SpeechSynthesisUtterance();
   speech.lang = "de";
-  //   speech.lang = "en-US";
   speech.pitch = 0.9;
   speech.volume = 1;
   speech.rate = 1;
@@ -37,7 +29,6 @@ function determineWords(speech, words) {
 
   if (words.includes("Hallo")) {
     speech.text = "hallo... , ich bin ein programmierter Bot,.... Bisher kann ich nur wenige Kommandos. Aber mein Entwickler, bringt mir jeden Tag neue Dinge bei. Wähle unten aus der Liste etwas aus, und ich werde mit dir interagieren."
-   
   }
 
   if (words.includes("wie ist das Wetter")) {
