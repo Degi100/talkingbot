@@ -26,7 +26,7 @@ function determineWords(speech, words) {
     speech.text = "Mir geht es gut, danke! Und Dir?";
   }
 
-  if (words.includes("Hallo")) {
+  if (words.includes("Hallo!")) {
     speech.text = "hallo... , ich bin ein programmierter Bot,.... Bisher kann ich nur wenige Kommandos. Aber mein Entwickler, bringt mir jeden Tag neue Dinge bei. Wähle unten aus der Liste etwas aus, und ich werde mit dir interagieren."
   }
 
